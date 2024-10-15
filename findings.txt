@@ -1,0 +1,6 @@
+The containers are assigned their own IP addresses based on the network created by docker. These share some network interfaces with the host hence why you can curl to these services. Containers can also be set specific IP addresses.
+The disk space usage output tells me that the containers have some access to some of the file systems such as /dev or /sys which include files both the container and the system both use for specific processes.
+On listing the processes we can see the containers do not share information with the system and they only list processes running within the container. From my knowledge this can be circumvented.
+Containers share uptime with the system itself, which can be seen from the uptime output being the whole systems uptime.
+All in all from what i can gather the containers share atleast partially the kernel with the host which handles alot of the memory and CPU resources.
+So a container shares the host systems kernel but runs in an isolated environment with seperate networking, file systems and processes. Certain aspects such as the file systems can be mounted from the host system.

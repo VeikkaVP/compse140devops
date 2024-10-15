@@ -1,0 +1,11 @@
+veikka@veikka-Latitude-7490:~$ docker container ls
+CONTAINER ID   IMAGE            COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+f2586415211f   ex1v2_service1   "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:8199->8199/tcp, :::8199->8199/tcp   ex1v2_service1_1
+59a2649bc548   ex1v2_service2   "python veikkapython…"   2 minutes ago   Up 2 minutes   3333/tcp                                    ex1v2_service2_1
+
+veikka@veikka-Latitude-7490:~$ docker network ls
+NETWORK ID     NAME                     DRIVER    SCOPE
+b235c4ee2b2c   bridge                   bridge    local
+d9fc06754d19   ex1v2_internal_network   bridge    local
+ad9b5d7078b7   host                     host      local
+92a844dc6cb7   none                     null      local
